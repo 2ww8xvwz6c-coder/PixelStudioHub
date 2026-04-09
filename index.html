@@ -5,7 +5,8 @@
     <title>Pixel Studio | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-bg">
+
 <nav>
     <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -14,23 +15,50 @@
     </ul>
 </nav>
 
+<div class="page-content">
+
 <header>
     <h1>Welcome to Pixel Studio</h1>
 </header>
 
-<main style="max-width: 1100px; margin: 0 auto; display: block;">
-    <section class="card" style="text-align: center; margin-bottom: 40px;">
-        <h2 style="font-family: 'Playfair Display';">Curated Collections</h2>
-        <p style="font-weight: 400; max-width: 800px; margin: 0 auto;">A digital sanctuary where nostalgia meets French contemporary standards.</p>
-        <div style="margin-top: 30px; color: #b89b61; font-weight: 600;">
-            <span>• Sprites</span> &nbsp; <span>• Backgrounds</span> &nbsp; <span>• Animations</span>
+<main>
+    <section class="card home-section">
+        <h2 class="section-title">Curated Collections</h2>
+        <p class="section-desc">
+            A digital sanctuary where nostalgia meets French contemporary standards.
+        </p>
+        <div class="collection-tags">
+            <span>• Sprites</span>
+            <span>• Backgrounds</span>
+            <span>• Animations</span>
         </div>
     </section>
 
-    <article class="card project-overview">
+
+    <article class="card project-overview home-section">
         <h2>The Vision</h2>
-        <p>Pixel Studio was conceived as a digital sanctuary prioritizing focus over visual noise. We believe pixel art deserves a home that acts as an exhibition, not just a scrollable feed.</p>
+        <p>
+            Pixel Studio was conceived as a digital sanctuary prioritizing focus over visual noise.
+            We believe pixel art deserves a home that acts as an exhibition, not just a scrollable feed.
+        </p>
     </article>
+     <section class="card" style="max-width: 1100px; margin: 0 auto 50px;">
+        <h2 style="text-align: center;">Membership Tiers</h2>
+        <table>
+            <thead>
+                <tr><th>Tier</th><th>Capacity</th><th>Price</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Free Artist</td><td>3 Exhibits</td><td>Free</td></tr>
+                <tr><td>Elite Curator</td><td>Unlimited</td><td>Gold</td></tr>
+            </tbody>
+        </table>
+        <div style="text-align:center; margin-top: 30px;">
+    <a href="signup.html" class="join-btn">Start Your Free Trial</a>
+</div>
+    </section>
 </main>
+
+</div>
 </body>
 </html>
