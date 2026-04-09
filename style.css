@@ -12,24 +12,45 @@
     --transition-sliding: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    font-size: 1.1rem;
+    color: #684e27;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    accent-color: var(--accent-gold);
+}
+
 /* -----------------------------------------------------------
-   2. GLOBAL BODY & BACKGROUND
+   2.BODY & BACKGROUND
 ----------------------------------------------------------- */
 body {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(rgba(249, 249, 249, 0.6), rgba(249, 249, 249, 0.6)), 
-                url('images/gallery-entrance.png') no-repeat center center fixed;
-    background-size: cover;
+    font-weight: 400;
+    background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding-top: 100px;
     line-height: 1.6;
-    animation: fadeIn 0.6s ease;
 }
 
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.page-content {
+    animation: fadeIn 0.6s ease;
+}
+
+.home-bg {
+    background: 
+       linear-gradient(rgba(249, 249, 249, 0.15), rgba(249, 249, 249, 0.15)),
+        url('gallary-enterance.jpeg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* -----------------------------------------------------------
@@ -42,7 +63,7 @@ nav {
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
     padding: 22px 0;
-    z-index: 1000; 
+    z-index: 1000;
 }
 
 nav ul {
@@ -65,25 +86,30 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #f0f0f2;
+    background-color: #eeeeee;
     padding-left: 25px;
     color: var(--accent-gold);
 }
 
 nav ul li a.active {
-    background-color: #f0f0f2;
+    background-color: #ebebeb;
     color: var(--accent-gold);
 }
 
 /* -----------------------------------------------------------
    4. HEADERS & TITLES
 ----------------------------------------------------------- */
+.home-bg header h1 {
+    color: #ffffff;
+    text-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.45),
+        0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
 header h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3.8rem;
-    color: var(--accent-gold);
-    text-align: center;
-    text-shadow: 2px 4px 10px rgba(0,0,0,0.1); 
+    text-align: center; 
 }
 
 footer {
@@ -101,12 +127,19 @@ footer {
     border-radius: var(--radius-apple);
     padding: 50px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 tbody tr:hover {
@@ -119,11 +152,34 @@ th {
     padding: 20px;
     color: var(--accent-gold);
     border-bottom: 1px solid #eee;
+    text-align: center;
 }
 
 td {
     padding: 20px;
     border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.join-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: var(--accent-gold);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
+
+.card:first-of-type {
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
 }
 
 .mission-row {
@@ -138,6 +194,12 @@ td {
     border-top: 5px solid var(--accent-gold);
     flex: 1;
     min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
 }
 
 /* -----------------------------------------------------------
@@ -148,7 +210,7 @@ form {
     margin: 40px auto 120px;
     padding: 60px;
     background-color: var(--card-bg);
-    border-radius: 35px; /* Highly rounded form borders */
+    border-radius: 35px;
     box-shadow: 0 25px 60px rgba(0,0,0,0.06);
 }
 
@@ -162,10 +224,10 @@ form label {
     margin-bottom: 8px;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
     width: 100%;
     padding: 16px;
-    border: 1px solid #eeeeee;
+    border: 1px solid #d1d1d1;
     border-radius: 14px; 
     background-color: #fafafa;
     box-sizing: border-box;
@@ -189,3 +251,52 @@ button:hover {
     opacity: 0.8;
 }
 
+.signup-link {
+    color: var(--accent-gold);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.home-section {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    margin-top: -10px;
+}
+
+.section-desc {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.collection-tags span {
+    color: var(--accent-gold);
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.join-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.join-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: var(--accent-gold);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+}
