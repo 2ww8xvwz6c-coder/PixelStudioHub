@@ -1,0 +1,191 @@
+/* -----------------------------------------------------------
+   1. IMPORT FONTS & VARIABLES
+----------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333333;
+    --accent-gold: #b89b61;
+    --card-bg: #ffffff;
+    --radius-apple: 22px; 
+    --transition-sliding: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* -----------------------------------------------------------
+   2. GLOBAL BODY & BACKGROUND
+----------------------------------------------------------- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(rgba(249, 249, 249, 0.6), rgba(249, 249, 249, 0.6)), 
+                url('images/gallery-entrance.png') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-color);
+    margin: 0;
+    padding-top: 100px;
+    line-height: 1.6;
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* -----------------------------------------------------------
+   3.NAVIGATION BAR
+----------------------------------------------------------- */
+nav {
+    position: fixed;
+    top: 0; width: 100%;
+    background-color: rgba(249, 249, 249, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 22px 0;
+    z-index: 1000; 
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0; padding: 0;
+    gap: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: var(--transition-sliding); 
+}
+
+nav ul li a:hover {
+    background-color: #f0f0f2;
+    padding-left: 25px;
+    color: var(--accent-gold);
+}
+
+nav ul li a.active {
+    background-color: #f0f0f2;
+    color: var(--accent-gold);
+}
+
+/* -----------------------------------------------------------
+   4. HEADERS & TITLES
+----------------------------------------------------------- */
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    color: var(--accent-gold);
+    text-align: center;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.1); 
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* -----------------------------------------------------------
+   5.CARDS & TABLES
+----------------------------------------------------------- */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-apple);
+    padding: 50px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+tbody tr:hover {
+    background-color: #fafafa;
+    transition: 0.2s;
+}
+
+th {
+    text-align: left;
+    padding: 20px;
+    color: var(--accent-gold);
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.mission-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px auto;
+    max-width: 1100px;
+}
+
+.mission-card {
+    border-top: 5px solid var(--accent-gold);
+    flex: 1;
+    min-width: 250px;
+}
+
+/* -----------------------------------------------------------
+   6. REFINED FORMS
+----------------------------------------------------------- */
+form {
+    width: 500px;
+    margin: 40px auto 120px;
+    padding: 60px;
+    background-color: var(--card-bg);
+    border-radius: 35px; /* Highly rounded form borders */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.06);
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--accent-gold); 
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #eeeeee;
+    border-radius: 14px; 
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+button, input[type="submit"] {
+    width: 100%;
+    margin-top: 40px;
+    padding: 18px;
+    background-color: var(--accent-gold);
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
