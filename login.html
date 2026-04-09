@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pixel Art Portfolio Hub - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<header>
+    <img src="images/gallery-entrance.png" alt="Gallery Entrance" usemap="#gallerymap" style="width:300px; border-radius: 10px;">
+    <map name="gallerymap">
+        <area shape="rect" coords="0,0,300,300" href="about.html" alt="Enter Gallery">
+    </map>
+    <h1>Login</h1>
+</header>
+
+<main>
+    <form action="#" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+        <p style="margin-top:15px; font-size:0.9rem; text-align: center;">Don't have an account? 
+            <a href="signup.html" style="color:#b89b61; text-decoration: none; font-weight: bold;">Sign up here</a>
+        </p>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Pixel Art Portfolio Hub</p>
+</footer>
+</body>
+</html>
