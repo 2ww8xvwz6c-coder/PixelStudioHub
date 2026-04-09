@@ -2,40 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pixel Art Portfolio Hub - Login</title>
+    <title>Pixel Studio | Login</title>
+
+    <!-- Embedded style added -->
+    <style>
+        /* Embedded style block for login page */
+        /* Center the Sign-Up link text */
+        .signup-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* Style for the link */
+        .signup-link {
+            color: #d4af37; /* gold accent */
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <!-- External CSS remains untouched -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="login.html" class="active">Login</a></li>
-    </ul>
-</nav>
 
-<header>
-    <h1>Login</h1>
-</header>
+<body class="login-bg">
 
-<main>
-    <form action="#" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+        </ul>
+    </nav>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+    <header>
+        <h1>Login</h1>
+    </header>
 
-        <button type="submit">Login</button>
-        <p style="margin-top:15px; font-size:0.9rem; text-align: center;">Don't have an account? 
-            <a href="signup.html" class="signup-link">Sign up here</a>
+    <main>
+        <form action="#" method="post">
+            <label for="email">Username:</label>
+            <input type="text"   placeholder="Enter your username">
 
-        </p>
-    </form>
-</main>
+            <label for="password">Password:</label>
+            <input type="password" placeholder="Enter your password">
 
-<footer>
-    <p>&copy; 2026 Pixel Studio Hub</p>
-</footer>
+            <input type="submit" value="Login">
+
+            <!-- Centered "Sign up here" -->
+            <p class="signup-text">Don't have an account? <a href="signup.html" class="signup-link">Sign up here</a></p>
+        </form>
+    </main>
+
 </body>
 </html>
