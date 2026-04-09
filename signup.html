@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join | Pixel Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>Join the Collective</h1>
+</header>
+
+<main>
+    <form action="#">
+        <label>Username:</label>
+        <input type="text" required>
+
+        <label>Password:</label>
+        <input type="password" required>
+
+        <label>Confirm Password:</label>
+        <input type="password" required>
+
+        <label>Account Type</label>
+        <div style="margin: 15px 0 25px; display: flex; gap: 20px;">
+            <label style="display:inline; text-transform: none; font-size: 0.9rem;" for="free"><input type="radio" name="acc" id="free" checked> Free</label>
+            <label style="display:inline; text-transform: none; font-size: 0.9rem;" for="pro"><input type="radio" name="acc" id="pro"> Pro</label>
+        </div>
+
+        <label>Elite Interests</label>
+        <div style="margin: 15px 0 25px; display: flex; gap: 20px;">
+            <label style="text-transform: none; font-size: 0.9rem;"><input type="checkbox"> Sprites</label>
+            <label style="text-transform: none; font-size: 0.9rem;"><input type="checkbox"> Backgrounds</label>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</main>
+</body>
+</html>
