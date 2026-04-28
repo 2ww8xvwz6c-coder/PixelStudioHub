@@ -4,29 +4,12 @@
     <meta charset="UTF-8">
     <title>Pixel Studio | Login</title>
 
-    <!-- Embedded style added -->
     <style>
-        /* Embedded style block for login page */
-        /* Center the Sign-Up link text */
-        .signup-text {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.95rem;
-        }
-
-        /* Style for the link */
-        .signup-link {
-            color: #d4af37; /* gold accent */
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .signup-link:hover {
-            text-decoration: underline;
-        }
+        .signup-text { text-align: center; margin-top: 15px; font-size: 0.95rem; }
+        .signup-link { color: #d4af37; text-decoration: none; font-weight: 600; }
+        .signup-link:hover { text-decoration: underline; }
     </style>
 
-    <!-- External CSS remains untouched -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -47,17 +30,16 @@
     <main>
         <form action="#" method="post">
             <label for="email">Username:</label>
-            <input type="text"   placeholder="Enter your username">
+            <input type="text" placeholder="Enter your username">
 
             <label for="password">Password:</label>
             <input type="password" placeholder="Enter your password">
 
             <input type="submit" value="Login">
 
-            <!-- Centered "Sign up here" -->
             <p class="signup-text">Don't have an account? <a href="signup.html" class="signup-link">Sign up here</a></p>
         </form>
     </main>
-
+<script src="script.js"></script>
 </body>
 </html>
